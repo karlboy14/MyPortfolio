@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <style>
         
         #preloader{
-            background-image: url('img/preloader.gif');
-            display: block;
-            height: 30px;
-            width: 61px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 99999999999;
+            height: 100%;
+            width: 100%;
+            overflow: visible;
+            background:#fff url('img/ezgif-2-6d0b072c3d3f.gif') no-repeat center center;
         }
 
     </style>
 </head>
 <body>
+    <!-- Preloader div start -->
    <div id="preloader"></div>
+   <!-- Preloader div end -->
+
+   <!-- General content start -->
+   <div id="content">
+        <h1>Welcom to My Portfolio</h1>
+   </div>
+   <!-- General content end -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
+    <!-- Fade and remove preloader -->
+   <script>
+        $(window).load(function(){
+	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+});
+    </script>
 </body>
 </html>
